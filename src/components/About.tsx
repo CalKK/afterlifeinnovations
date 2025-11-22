@@ -18,10 +18,10 @@ const About = () => {
             <h3 className="text-3xl font-heading font-bold text-innovation">
               Our Mission
             </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">Afterlife Innovations unlocks the second life of every battery. Through collecting, repurposing, and recycling cells from EVs to smartphones we transforming waste into ready-to-use energy solutions. 
-              We combat environmental degradation by diverting toxic e-waste and recovering valuable materials. 
-              Simultaneously, we address energy poverty by engineering repurposed battery packs for off-grid mini-grids, bringing power to communities beyond national infrastructure. 
-              By ensuring every cell is reused or responsibly recycled, we abide by a simple promise: no battery is left behind, fueling a truly circular economy.
+            <p className="text-lg text-muted-foreground leading-relaxed">Afterlife Innovations Limited is a Kenyan clean-tech startup offering Battery Analytics as a Service (BAaaS) to extend lithium battery life. 
+              Our advanced data models assess battery health and degradation, enabling energy providers, recyclers, and manufacturers to make informed decisions on reuse, replacement, and end-of-life management. 
+              We identify batteries suitable for second-life applications, forecasting lifespan and recommending efficient reuse strategies. Repurposed batteries are integrated into affordable energy storage systems, supporting backup power and off-grid solutions for homes, small businesses, and microgrids. 
+              Our mission is to maximize battery value and promote sustainable energy access through intelligent analytics and reuse.
             </p>
           </div>
 
