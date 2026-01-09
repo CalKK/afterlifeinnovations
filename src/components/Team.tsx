@@ -37,14 +37,14 @@ const Team = () => {
       bio: "Plays a pivotal role in driving innovation and ensuring the scientific and technical excellence of all battery repurposing, recycling, and energy storage solutions.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/KERING.jpg",
       initials: "JK"
-    },
-    {
+    }
+   /* {
       name: "Janet Mbugua",
       role: "CFO",
       bio: "Directs financial planning, budgeting, and funding strategies to sustain growth, ensure compliance, and support investments in clean technology and infrastructure.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/JANET.jpg",
-      initials: "JM"
-    }
+      initials: "JM" 
+    } */
   ];
 
   return (
