@@ -4,17 +4,17 @@ const Hero = () => {
   const products = [
     {
       name: "Repurposed 18650 Cells",
-      image: "/placeholder.svg",
+      image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/18650 cells.jpeg",
       comingSoon: false
     },
     {
       name: "Repurposed Pouch Cells",
-      image: "/placeholder.svg",
+      image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/repurposed pouch cells.png",
       comingSoon: false
     },
     {
       name: "10000mAh Power Bank",
-      image: "/placeholder.svg",
+      image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/PWB.png",
       comingSoon: false
     },
     {
