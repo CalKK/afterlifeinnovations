@@ -10,8 +10,8 @@ const Team = () => {
       bio: "Provides overall vision, leadership, and strategic direction to ensure Afterlife Innovations scales impactfully while fulfilling its mission of powering a circular economy through second-life batteries.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/MORRIS.jpg",
       initials: "MM",
-      linkedin: "#",
-      whatsapp: "#"
+      linkedin: "https://www.linkedin.com/in/morris-murigi-4b412b1b7/",
+      whatsapp: "+254792902821"
     },
     {
       name: "Andy Onyango",
@@ -19,8 +19,8 @@ const Team = () => {
       bio: "Manages day-to-day operations across collection, logistics, refurbishing, and recycling to ensure smooth, cost-effective, and scalable execution of the company's circular processes.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/ANDY.png",
       initials: "AO",
-      linkedin: "#",
-      whatsapp: "#"
+      linkedin: "https://www.linkedin.com/in/andy-onyango-junior-338103249/",
+      whatsapp: "+254113643607"
     },
     {
       name: "Calvin Kinyanjui",
@@ -28,8 +28,8 @@ const Team = () => {
       bio: "Oversees the design, development, and lifecycle of repurposed battery products and energy solutions to ensure they meet market needs, regulatory standards, and sustainability goals.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/CALVIN HEADSHOT.jpeg",
       initials: "CK",
-      linkedin: "#",
-      whatsapp: "#"
+      linkedin: "https://www.linkedin.com/in/calvin-kinyanjui-95734222a/",
+      whatsapp: "+254796120248"
     },
     {
       name: "Gabriel Musyoki",
@@ -37,8 +37,8 @@ const Team = () => {
       bio: "Leads the technological roadmap, including battery testing, energy management systems, and recycling tech innovations that drive efficiency, safety, and performance.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/GABU.jpg",
       initials: "GM",
-      linkedin: "#",
-      whatsapp: "#"
+      linkedin: "https://www.linkedin.com/in/gabriel-musyoki-aab417220/",
+      whatsapp: "+254791578159"
     },
     {
       name: "Jeremy Kering",
@@ -46,8 +46,8 @@ const Team = () => {
       bio: "Plays a pivotal role in driving innovation and ensuring the scientific and technical excellence of all battery repurposing, recycling, and energy storage solutions.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/KERING.jpg",
       initials: "JK",
-      linkedin: "#",
-      whatsapp: "#"
+      linkedin: "https://www.linkedin.com/in/jeremy-kering-a0a5b32a2/",
+      whatsapp: "+254714248747"
     }
   ];
 
