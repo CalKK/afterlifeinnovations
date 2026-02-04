@@ -1,5 +1,6 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
+import { Linkedin, MessageCircle } from "lucide-react";
 
 const Team = () => {
   const teamMembers = [
@@ -8,43 +9,46 @@ const Team = () => {
       role: "CEO",
       bio: "Provides overall vision, leadership, and strategic direction to ensure Afterlife Innovations scales impactfully while fulfilling its mission of powering a circular economy through second-life batteries.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/MORRIS.jpg",
-      initials: "MM"
+      initials: "MM",
+      linkedin: "#",
+      whatsapp: "#"
     },
     {
       name: "Andy Onyango",
       role: "COO",
-      bio: "Manages day-to-day operations across collection, logistics, refurbishing, and recycling to ensure smooth, cost-effective, and scalable execution of the company’s circular processes.",
+      bio: "Manages day-to-day operations across collection, logistics, refurbishing, and recycling to ensure smooth, cost-effective, and scalable execution of the company's circular processes.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/ANDY.png",
-      initials: "AO"
+      initials: "AO",
+      linkedin: "#",
+      whatsapp: "#"
     },
     {
       name: "Calvin Kinyanjui",
       role: "CPO",
       bio: "Oversees the design, development, and lifecycle of repurposed battery products and energy solutions to ensure they meet market needs, regulatory standards, and sustainability goals.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/CALVIN HEADSHOT.jpeg",
-      initials: "CK"
+      initials: "CK",
+      linkedin: "#",
+      whatsapp: "#"
     },
     {
       name: "Gabriel Musyoki",
       role: "CTO",
       bio: "Leads the technological roadmap, including battery testing, energy management systems, and recycling tech innovations that drive efficiency, safety, and performance.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/GABU.jpg",
-      initials: "GM"
+      initials: "GM",
+      linkedin: "#",
+      whatsapp: "#"
     },
     {
       name: "Jeremy Kering",
       role: "CRO",
       bio: "Plays a pivotal role in driving innovation and ensuring the scientific and technical excellence of all battery repurposing, recycling, and energy storage solutions.",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/KERING.jpg",
-      initials: "JK"
+      initials: "JK",
+      linkedin: "#",
+      whatsapp: "#"
     }
-   /* {
-      name: "Janet Mbugua",
-      role: "CFO",
-      bio: "Directs financial planning, budgeting, and funding strategies to sustain growth, ensure compliance, and support investments in clean technology and infrastructure.",
-      image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/JANET.jpg",
-      initials: "JM" 
-    } */
   ];
 
   return (
@@ -76,9 +80,31 @@ const Team = () => {
                   </Avatar>
                 </div>
                 
-                <h3 className="text-xl font-heading font-bold text-innovation mb-2">
+                <h3 className="text-xl font-heading font-bold text-innovation mb-1">
                   {member.name}
                 </h3>
+
+                {/* Social Media Icons */}
+                <div className="flex justify-center gap-3 mb-2">
+                  <a 
+                    href={member.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-sustainability/10 rounded-full flex items-center justify-center hover:bg-sustainability hover:text-sustainability-foreground transition-all duration-200"
+                    aria-label={`${member.name} LinkedIn`}
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                  <a 
+                    href={member.whatsapp} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-sustainability/10 rounded-full flex items-center justify-center hover:bg-sustainability hover:text-sustainability-foreground transition-all duration-200"
+                    aria-label={`${member.name} WhatsApp`}
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                  </a>
+                </div>
                 
                 <p className="text-xl font-heading font-bold text-innovation mb-2">
                   {member.role}
