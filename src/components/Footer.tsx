@@ -13,7 +13,7 @@ const Footer = () => {
       label: "Email",
       value: "afterlifebatteries@gmail.com",
       href: "mailto:afterlifebatteries@gmail.com"
-    },
+    }, 
     {
       icon: MessageCircle,
       label: "WhatsApp",
