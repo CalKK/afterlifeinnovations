@@ -11,7 +11,7 @@ const Team = () => {
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/MORRIS.jpg",
       initials: "MM",
       linkedin: "https://www.linkedin.com/in/morris-murigi-4b412b1b7/",
-      whatsapp: "+254792902821"
+      whatsapp: "https://wa.me/254792902821"
     },
     {
       name: "Andy Onyango",
@@ -20,7 +20,7 @@ const Team = () => {
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/ANDY.png",
       initials: "AO",
       linkedin: "https://www.linkedin.com/in/andy-onyango-junior-338103249/",
-      whatsapp: "+254113643607"
+      whatsapp: "https://wa.me/254113643607"
     },
     {
       name: "Calvin Kinyanjui",
@@ -29,7 +29,7 @@ const Team = () => {
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/CALVIN HEADSHOT.jpeg",
       initials: "CK",
       linkedin: "https://www.linkedin.com/in/calvin-kinyanjui-95734222a/",
-      whatsapp: "+254796120248"
+      whatsapp: "https://wa.me/254796120248"
     },
     {
       name: "Gabriel Musyoki",
@@ -38,7 +38,7 @@ const Team = () => {
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/GABU.jpg",
       initials: "GM",
       linkedin: "https://www.linkedin.com/in/gabriel-musyoki-aab417220/",
-      whatsapp: "+254791578159"
+      whatsapp: "https://wa.me/254791578159"
     },
     {
       name: "Jeremy Kering",
@@ -47,7 +47,7 @@ const Team = () => {
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/KERING.jpg",
       initials: "JK",
       linkedin: "https://www.linkedin.com/in/jeremy-kering-a0a5b32a2/",
-      whatsapp: "+254714248747"
+      whatsapp: "https://wa.me/254714248747"
     }
   ];
 
