@@ -4,7 +4,7 @@ import { Linkedin, MessageCircle } from "lucide-react";
 
 const Team = () => {
   const teamMembers = [
-    {
+   /* {
       name: "Morris Murigi",
       role: "CEO",
       bio: "Provides overall vision, leadership, and strategic direction to ensure Afterlife Innovations scales impactfully while fulfilling its mission of powering a circular economy through second-life batteries.",
@@ -12,7 +12,7 @@ const Team = () => {
       initials: "MM",
       linkedin: "https://www.linkedin.com/in/morris-murigi-4b412b1b7/",
       whatsapp: "https://wa.me/254792902821"
-    },
+    }, */
     {
       name: "Andy Onyango",
       role: "COO",
