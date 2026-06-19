@@ -18,7 +18,7 @@ const Hero = () => {
       comingSoon: false
     },
     {
-      name: "48V 30Ah Repurposed Battery",
+      name: "Repurposed Battery Energy Storage System(BESS)",
       image: "/placeholder.svg",
       comingSoon: true
     }
