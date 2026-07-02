@@ -1,6 +1,5 @@
-import { Smartphone, Car, Home, Factory } from "lucide-react";
+import { ArrowRight, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Products = () => {
   const products = [
@@ -40,53 +39,67 @@ const Products = () => {
     */
   ];
   return (
-    <section id="products" className="py-20 bg-background">
+    <section id="products" className="py-10 md:py-14">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-heading font-bold text-innovation mb-4">
-            Sustainable Power Solutions
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <div className="command-label mb-6">Section 04 - Product Systems</div>
+            <h2 className="section-heading">Sustainable Power Solutions</h2>
+          </div>
+          <p className="section-copy">
             Our flagship second-life powerbank 
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid gap-8">
           {products.map((product, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-border">
-              <div className="aspect-video bg-gradient-to-br from-sustainability/10 to-sustainability/5 overflow-hidden">
-                <img 
+            <div key={index} className="tactical-card grid gap-8 overflow-hidden lg:grid-cols-[minmax(320px,0.9fr)_minmax(0,1.1fr)]">
+              <div className="overflow-hidden border border-border bg-muted/50">
+                <img
                   src={product.image} 
                   alt={product.title}
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
-     <CardHeader>
-  <CardTitle className="flex items-center gap-3 text-2xl font-heading text-innovation">
-    {product.title}
-  </CardTitle>
-</CardHeader>
+              <div className="flex flex-col">
+                <div className="mb-6 flex items-start justify-between gap-4">
+                  <div className="flex h-14 w-14 items-center justify-center border border-primary/35 bg-secondary/20 text-primary">
+                    <Smartphone className="h-6 w-6" />
+                  </div>
+                  <p className="font-mono-display text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+                    v{index + 1.0} // Product
+                  </p>
+                </div>
 
-<CardContent className="space-y-6">
-  <p className="text-muted-foreground leading-relaxed">
-    {product.description}
-  </p>
+                <h3 className="tactical-title text-3xl">{product.title}</h3>
+                <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+                  {product.description}
+                </p>
 
-  <div className="space-y-2">
-    <h4 className="font-heading font-semibold text-innovation">Key Features:</h4>
-    <ul className="space-y-1">
-      {product.features.map((feature, featureIndex) => (
-        <li key={featureIndex} className="text-muted-foreground text-sm flex items-center gap-2">
-          <div className="w-1.5 h-1.5 bg-sustainability rounded-full" />
-          {feature}
-        </li>
-      ))}
-    </ul>
-  </div>
-</CardContent>
+                <div className="tactical-divider my-8" />
 
-</Card>
+                <div className="space-y-3">
+                  <h4 className="font-mono-display text-xs uppercase tracking-[0.3em] text-primary">
+                    Key Features
+                  </h4>
+                  <ul className="space-y-3">
+                    {product.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-3 text-lg text-muted-foreground">
+                        <div className="h-2 w-2 bg-primary" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                  <Button className="justify-between sm:min-w-[240px]" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
+                    Request Pricing
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
