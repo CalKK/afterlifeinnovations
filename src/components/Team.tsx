@@ -1,6 +1,5 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Card, CardContent } from "@/components/ui/card";
-import { Linkedin, MessageCircle } from "lucide-react";
+import { ArrowRight, Linkedin, MessageCircle } from "lucide-react";
 
 const Team = () => {
   const teamMembers = [
@@ -52,45 +51,55 @@ const Team = () => {
   ];
 
   return (
-    <section id="team" className="py-20 bg-background">
+    <section id="team" className="py-10 md:py-14">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-heading font-bold text-innovation mb-4">
-            Meet Our Team
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <div className="command-label mb-6">Section 05 - TeamComposition</div>
+            <h2 className="section-heading">Meet Our Team</h2>
+          </div>
+          <p className="section-copy">
             The passionate team driving innovation in sustainable battery solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-border">
-              <CardContent className="p-6 text-center">
-                <div className="mb-6">
-                  <Avatar className="w-24 h-24 mx-auto">
+            <div key={index} className="tactical-card flex flex-col">
+              <div className="mb-6 flex items-start justify-between gap-4">
+                <Avatar className="h-24 w-24 border border-primary/35">
                     <AvatarImage 
                       src={member.image} 
                       alt={member.name}
                       className="object-cover"
                     />
-                    <AvatarFallback className="bg-sustainability/10 text-sustainability text-lg font-semibold">
+                    <AvatarFallback className="bg-secondary/10 text-primary text-lg font-semibold">
                       {member.initials}
                     </AvatarFallback>
-                  </Avatar>
-                </div>
-                
-                <h3 className="text-xl font-heading font-bold text-innovation mb-1">
-                  {member.name}
-                </h3>
+                </Avatar>
+              </div>
 
-                {/* Social Media Icons */}
-                <div className="flex justify-center gap-3 mb-2">
+              <h3 className="tactical-title text-2xl">
+                {member.name}
+              </h3>
+
+              <p className="mt-2 font-mono-display text-xs uppercase tracking-[0.3em] text-primary">
+                {member.role}
+              </p>
+
+              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+                {member.bio}
+              </p>
+
+              <div className="tactical-divider my-8" />
+
+              <div className="mt-auto flex items-center justify-between gap-4">
+                <div className="flex gap-3">
                   <a 
                     href={member.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-8 h-8 bg-sustainability/10 rounded-full flex items-center justify-center hover:bg-sustainability hover:text-sustainability-foreground transition-all duration-200"
+                    className="flex h-11 w-11 items-center justify-center border border-primary/35 bg-secondary/15 text-primary transition-all duration-200 hover:bg-primary hover:text-primary-foreground"
                     aria-label={`${member.name} LinkedIn`}
                   >
                     <Linkedin className="w-4 h-4" />
@@ -99,22 +108,14 @@ const Team = () => {
                     href={member.whatsapp} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-8 h-8 bg-sustainability/10 rounded-full flex items-center justify-center hover:bg-sustainability hover:text-sustainability-foreground transition-all duration-200"
+                    className="flex h-11 w-11 items-center justify-center border border-primary/35 bg-secondary/15 text-primary transition-all duration-200 hover:bg-primary hover:text-primary-foreground"
                     aria-label={`${member.name} WhatsApp`}
                   >
                     <MessageCircle className="w-4 h-4" />
                   </a>
                 </div>
-                
-                <p className="text-xl font-heading font-bold text-innovation mb-2">
-                  {member.role}
-                </p>
-                
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {member.bio}
-                </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
