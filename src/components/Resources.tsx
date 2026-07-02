@@ -1,6 +1,5 @@
-import { BookOpen, Play, FileText, ArrowRight } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Resources = () => {
   const blogPosts = [
@@ -60,97 +59,102 @@ const Resources = () => {
   ];
 
   return (
-   <section id="resources" className="py-20 bg-background">
+   <section id="resources" className="py-10 md:py-14">
   <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
-      <h2 className="text-4xl font-heading font-bold text-innovation mb-4">
-        Features & Accolades
-      </h2>
-      <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+    <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div>
+        <div className="command-label mb-6">Section 07 - Media Archive</div>
+        <h2 className="section-heading">Features & Accolades</h2>
+      </div>
+      <p className="section-copy">
         Preview some of our accolades, accomplishments & features. 
       </p>
     </div>
 
-    {/* Blog Posts */}
-    <div className="mb-16">
-      <div className="flex items-center justify-between mb-8">
-        <h3 className="text-2xl font-heading font-semibold text-innovation">
-          Find them 
+    <div className="mb-12">
+      <div className="mb-8 flex items-center justify-between">
+        <h3 className="tactical-title text-3xl">
+          Find them
         </h3>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
         {blogPosts.map((post, index) => (
-          <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 border-border">
+          <div key={index} className="tactical-card overflow-hidden p-0">
             <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${post.image})` }} />
-            
-            <CardHeader className="p-4">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="px-2 py-1 bg-sustainability/10 text-sustainability text-xs font-medium rounded-full">
+
+            <div className="p-5">
+              <div className="mb-5 flex items-center justify-between gap-4">
+                <span className="font-mono-display text-[11px] uppercase tracking-[0.3em] text-primary">
                   {post.category}
                 </span>
+                <span className="font-mono-display text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+                  {post.date}
+                </span>
               </div>
-              <CardTitle className="text-lg font-heading text-innovation line-clamp-2">
+
+              <h4 className="tactical-title text-2xl line-clamp-2">
                 {post.title}
-              </CardTitle>
-            </CardHeader>
-            
-            <CardContent className="p-4 pt-0">
-              <p className="text-muted-foreground mb-3 line-clamp-2 text-sm">
+              </h4>
+
+              <p className="mt-4 text-base text-muted-foreground line-clamp-3">
                 {post.excerpt}
               </p>
-              
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-muted-foreground">{post.date}</span>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="text-sustainability hover:bg-sustainability/10 text-xs"
-                  onClick={() => window.open(post.link, "_blank")}
-                >
-                  Read More
-                  <ArrowRight className="w-3 h-3 ml-1" />
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+
+              <div className="tactical-divider my-6" />
+
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full justify-between"
+                onClick={() => window.open(post.link, "_blank")}
+              >
+                Read More
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
         ))}
       </div>
     </div> 
 
-    {/* Videos */}
-    <div className="mb-16">
-      <div className="flex items-center justify-between mb-8">
-        <h3 className="text-2xl font-heading font-semibold text-innovation">
+    <div className="mb-12">
+      <div className="mb-8 flex items-center justify-between">
+        <h3 className="tactical-title text-3xl">
           Videos
         </h3>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {videos.map((video, index) => (
-          <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 border-border">
+          <div key={index} className="tactical-card overflow-hidden p-0">
             <div className="relative">
               <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${video.thumbnail})` }} />
-              <div className="absolute inset-0 bg-innovation/20 flex items-center justify-center">
-                <Button 
-                  size="sm" 
-                  className="rounded-full bg-sustainability hover:bg-sustainability-light"
+              <div className="absolute inset-0 flex items-center justify-center bg-innovation/20">
+                <Button
+                  size="icon"
+                  className="border-primary bg-primary"
                   onClick={() => window.open(video.link, "_blank")}
                 >
-                  <Play className="w-5 h-5" />
+                  <Play className="h-5 w-5" />
                 </Button>
               </div>
             </div>
-            
-            <CardHeader className="p-4">
-              <CardTitle className="text-lg font-heading text-innovation line-clamp-2">
+
+            <div className="p-5">
+              <div className="mb-4 flex items-center justify-between gap-4">
+                <span className="font-mono-display text-[11px] uppercase tracking-[0.3em] text-primary">
+                  Media
+                </span>
+              </div>
+              <h4 className="tactical-title text-2xl line-clamp-2">
                 {video.title}
-              </CardTitle>
-              <p className="text-muted-foreground text-sm line-clamp-2">
+              </h4>
+              <p className="mt-4 text-base text-muted-foreground line-clamp-3">
                 {video.description}
               </p>
-            </CardHeader>
-          </Card>
+            </div>
+          </div>
         ))}
       </div>
     </div>
@@ -160,4 +164,3 @@ const Resources = () => {
 };
 
 export default Resources;
-
