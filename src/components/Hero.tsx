@@ -59,7 +59,7 @@ const Hero = () => {
               className="px-8 py-4 text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300"
               onClick={() => window.open("https://afterlife-intelligence-frontend-production.up.railway.app/inventory", "_blank")}
             >
-              Access Battery Intelligence Platform
+              Access Afterlife Intelligence Platform
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
