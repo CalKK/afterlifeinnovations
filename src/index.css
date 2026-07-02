@@ -1,128 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Battery Reborn Design System - Sustainability focused with green, black, white theme */
-
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 12%;
+    --foreground: 0 0% 7%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 12%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 7%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 12%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 7%;
 
-    --primary: 142 71% 45%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 7%;
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 12%;
+    --secondary-foreground: 0 0% 7%;
 
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 142 71% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 7%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 142 71% 45%;
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 0 0% 7%;
 
-    --radius: 0.75rem;
+    --radius: 0rem;
 
-    /* Custom sustainability colors */
-    --sustainability: 142 71% 45%;
-    --sustainability-foreground: 0 0% 100%;
-    --sustainability-light: 142 71% 55%;
-    --trust: 0 0% 100%;
-    --innovation: 0 0% 12%;
-    --innovation-foreground: 0 0% 100%;
+    --sustainability: 0 0% 7%;
+    --sustainability-foreground: 0 0% 98%;
+    --sustainability-light: 0 0% 90%;
+    --trust: 0 0% 98%;
+    --innovation: 0 0% 7%;
+    --innovation-foreground: 0 0% 98%;
 
     --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 0 0% 7%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 89%;
+    --sidebar-ring: 0 0% 7%;
   }
 
-  .dark {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 95%;
-
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 142 71% 45%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 0% 16%;
-    --secondary-foreground: 0 0% 95%;
-
-    --muted: 0 0% 16%;
-    --muted-foreground: 0 0% 65%;
-
-    --accent: 142 71% 45%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 142 71% 45%;
-
-    /* Custom sustainability colors for dark mode */
-    --sustainability: 142 71% 50%;
-    --sustainability-foreground: 0 0% 100%;
-    --sustainability-light: 142 71% 60%;
-    --trust: 0 0% 12%;
-    --innovation: 0 0% 95%;
-    --innovation-foreground: 0 0% 8%;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-body;
+    min-height: 100vh;
+    letter-spacing: 0.01em;
+    font-size: 1.1rem; /* Increased font size */
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.02));
+    mix-blend-mode: multiply;
+    z-index: -1;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}
+
+@layer components {
+  .command-label {
+    @apply inline-flex items-center gap-3 border border-primary/35 bg-secondary/20 px-4 py-2 text-[11px] uppercase tracking-[0.4em] text-primary;
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, 100% 100%, 0 100%, 0 0);
+    font-family: "Share Tech Mono", monospace;
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-6xl font-heading text-innovation;
+    line-height: 0.96;
+  }
+
+  .section-copy {
+    @apply text-xl text-muted-foreground max-w-3xl;
+    font-family: "Rajdhani", sans-serif;
+  }
+
+  .tactical-panel {
+    @apply relative overflow-hidden border border-primary/35 bg-card/85 shadow-[0_0_0_1px_rgba(0,0,0,0.08)];
+  }
+
+  .tactical-panel::before,
+  .tactical-panel::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .tactical-panel::before {
+    top: -1px;
+    left: -1px;
+    border-top-width: 2px;
+    border-left-width: 2px;
+  }
+
+  .tactical-panel::after {
+    right: -1px;
+    bottom: -1px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+  }
+
+  .tactical-card {
+    @apply tactical-panel p-7 md:p-8;
+  }
+
+  .tactical-divider {
+    @apply h-px w-full bg-border/80;
+  }
+
+  .tactical-meta {
+    @apply text-[11px] uppercase tracking-[0.35em] text-muted-foreground;
+    font-family: "Share Tech Mono", monospace;
+  }
+
+  .tactical-title {
+    @apply text-2xl md:text-3xl font-heading uppercase text-innovation;
+    line-height: 1.05;
+  }
+
+  .tactical-subtitle {
+    @apply text-base md:text-lg text-muted-foreground;
+  }
+
+  .tactical-stat {
+    @apply border-t border-border/90 pt-6;
   }
 }
 
 @layer utilities {
+  .font-heading {
+    font-family: "Black Ops One", cursive;
+  }
+
+  .font-body {
+    font-family: "Rajdhani", sans-serif;
+  }
+
+  .font-mono-display {
+    font-family: "Share Tech Mono", monospace;
+  }
+
   .fade-in {
     animation: fadeIn 0.6s ease-out;
   }
-  
+
   .slide-up {
     animation: slideUp 0.8s ease-out;
   }
-  
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -133,7 +201,7 @@
       transform: translateY(0);
     }
   }
-  
+
   @keyframes slideUp {
     from {
       opacity: 0;
