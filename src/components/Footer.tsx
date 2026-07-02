@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { ArrowRight, Instagram, Linkedin, Lock, Mail, MessageCircle, Phone, Zap } from "lucide-react";
 
 const Footer = () => {
 
@@ -29,120 +29,119 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="bg-innovation text-innovation-foreground">
-      <div className="container mx-auto px-4 py-16">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-          {/* Contact Information */}
-          <div>
-            <div className="flex items-center space-x-3 mb-6">
-               <img 
-                 src="https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/AFTERLIFE INNOVATIONS LOGO.png" 
-                 alt="Afterlife Innovations Logo" 
-                 className="w-10 h-10 rounded-full" 
-                 />
-              <h3 className="text-3xl font-heading font-bold">Afterlife Innovations</h3>
-            </div>
-            
-            <p className="text-lg mb-8 leading-relaxed opacity-90">
-              Where Batteries Begin Again.
-            </p>
+    <footer id="contact" className="py-10 md:py-14">
+      <div className="container mx-auto px-4">
+        <div className="tactical-panel p-8 md:p-12">
+          <div className="mx-auto max-w-6xl">
+            <div className="command-label mb-8">Engagement Panel</div>
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)]">
+              <div>
+                <h2 className="section-heading text-5xl md:text-7xl">
+                  <span className="block text-innovation">Request</span>
+                  <span className="block text-primary">Classified</span>
+                  <span className="block text-innovation">Enquiry</span>
+                </h2>
+                <p className="mt-8 max-w-3xl text-xl text-muted-foreground md:text-[2rem]/[1.4]">
+                  Where Batteries Begin Again.
+                </p>
 
-            <div className="space-y-4">
-              {contactInfo.map((item, index) => (
-                <a 
-                  key={index}
-                  href={item.href}
-                  className="flex items-center gap-4 hover:text-sustainability transition-colors duration-200 group"
-                >
-                  <div className="w-10 h-10 bg-sustainability/10 rounded-lg flex items-center justify-center group-hover:bg-sustainability/20 transition-colors duration-200">
-                    <item.icon className="w-5 h-5 text-sustainability" />
+                <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                  <a href="mailto:afterlifebatteries@gmail.com">
+                    <button className="inline-flex h-14 min-w-[280px] items-center justify-between border border-primary bg-primary px-8 font-mono-display text-sm uppercase tracking-[0.28em] text-primary-foreground transition-all duration-200 hover:bg-primary/90">
+                      <span className="inline-flex items-center gap-3">
+                        <Lock className="h-4 w-4" />
+                        Write to us
+                      </span>
+                      <ArrowRight className="h-4 w-4" />
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div className="tactical-card bg-white/60">
+                <div className="mb-6 flex items-center gap-4">
+                  <div className="flex h-14 w-14 items-center justify-center border border-primary/35 bg-secondary/20 text-primary">
+                    <Zap className="h-6 w-6" />
                   </div>
                   <div>
-                    <p className="text-sm opacity-75">{item.label}</p>
-                    <p className="font-medium">{item.value}</p>
+                    <h3 className="tactical-title text-2xl">Afterlife Innovations</h3>
+                    <p className="mt-2 font-mono-display text-[11px] uppercase tracking-[0.32em] text-muted-foreground">
+                      Battery Intel // Circular Economy
+                    </p>
                   </div>
-                </a>
-              ))}
+                </div>
+
+                <p className="text-lg text-muted-foreground">
+                  Where Batteries Begin Again.
+                </p>
+
+                <div className="mt-8 space-y-4">
+                  {contactInfo.map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.href}
+                      className="flex items-center justify-between gap-4 border border-border/80 px-4 py-4 transition-colors duration-200 hover:border-primary/45 hover:bg-secondary/10"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="flex h-11 w-11 items-center justify-center border border-primary/35 bg-secondary/15 text-primary">
+                          <item.icon className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <p className="font-mono-display text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{item.label}</p>
+                          <p className="text-lg text-innovation">{item.value}</p>
+                        </div>
+                      </div>
+                      <ArrowRight className="h-4 w-4 text-primary" />
+                    </a>
+                  ))}
+                </div>
+
+                <div className="mt-8 flex gap-4">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      className="flex h-11 w-11 items-center justify-center border border-primary/35 bg-secondary/15 text-primary transition-all duration-200 hover:bg-primary hover:text-primary-foreground"
+                      aria-label={social.label}
+                    >
+                      <social.icon className="h-5 w-5" />
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
 
-            {/* Social Media Links */}
-            <div className="flex gap-4 mt-8">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="w-10 h-10 bg-sustainability/10 rounded-lg flex items-center justify-center hover:bg-sustainability hover:text-sustainability-foreground transition-all duration-200"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+            <div className="mt-12 grid gap-8 border-t border-border/80 pt-8 md:grid-cols-3">
+              <div>
+                <p className="font-mono-display text-xs uppercase tracking-[0.3em] text-primary">Navigation</p>
+                <div className="mt-4 flex flex-col gap-3 text-muted-foreground">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#products">Products</a>
+                </div>
+              </div>
+              <div>
+                <p className="font-mono-display text-xs uppercase tracking-[0.3em] text-primary">Company</p>
+                <div className="mt-4 flex flex-col gap-3 text-muted-foreground">
+                  <a href="#team">Team</a>
+                  <a href="#testimonials">Testimonials</a>
+                  <a href="#resources">Features & Awards</a>
+                </div>
+              </div>
+              <div>
+                <p className="font-mono-display text-xs uppercase tracking-[0.3em] text-primary">Legal</p>
+                <div className="mt-4 flex flex-col gap-3 text-muted-foreground">
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Service</a>
+                  <a href="#">Cookie Policy</a>
+                </div>
+              </div>
             </div>
-          </div>
 
-          {/* Footer Links */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-              <h4 className="text-lg font-heading font-semibold mb-4 text-sustainability">
-                Navigation
-              </h4>
-              <ul className="space-y-3">
-                <li><a href="#home" className="opacity-75 hover:opacity-100 hover:text-sustainability transition-all duration-200">Home</a></li>
-                <li><a href="#about" className="opacity-75 hover:opacity-100 hover:text-sustainability transition-all duration-200">About</a></li>
-                <li><a href="#products" className="opacity-75 hover:opacity-100 hover:text-sustainability transition-all duration-200">Products</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-heading font-semibold mb-4 text-sustainability">
-                Company
-              </h4>
-              <ul className="space-y-3">
-                <li><a href="#team" className="opacity-75 hover:opacity-100 hover:text-sustainability transition-all duration-200">Team</a></li>
-                <li><a href="#testimonials" className="opacity-75 hover:opacity-100 hover:text-sustainability transition-all duration-200">Testimonials</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-heading font-semibold mb-4 text-sustainability">
-                Resources
-              </h4>
-              <ul className="space-y-3">
-                <li><a href="#resources" className="opacity-75 hover:opacity-100 hover:text-sustainability transition-all duration-200">Features & Awards</a></li>
-                <li><a href="#" className="opacity-75 hover:opacity-100 hover:text-sustainability transition-all duration-200">Battery Safety</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-heading font-semibold mb-4 text-sustainability">
-                Support
-              </h4>
-              <ul className="space-y-3">
-                <li><a href="#contact" className="opacity-75 hover:opacity-100 hover:text-sustainability transition-all duration-200">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-
-        {/* Bottom Bar */}
-        <div className="border-t border-sustainability/20 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="opacity-75 text-center md:text-left">
-              © 2024 Afterlife Innovations. All rights reserved. Building a sustainable tomorrow.
-            </p>
-            
-            <div className="flex gap-6 text-sm">
-              <a href="#" className="opacity-75 hover:opacity-100 hover:text-sustainability transition-all duration-200">
-                Privacy Policy
-              </a>
-              <a href="#" className="opacity-75 hover:opacity-100 hover:text-sustainability transition-all duration-200">
-                Terms of Service
-              </a>
-              <a href="#" className="opacity-75 hover:opacity-100 hover:text-sustainability transition-all duration-200">
-                Cookie Policy
-              </a>
+            <div className="mt-8 border-t border-border/80 pt-6">
+              <p className="text-center text-muted-foreground md:text-left">
+                © 2024 Afterlife Innovations. All rights reserved. Building a sustainable tomorrow.
+              </p>
             </div>
           </div>
         </div>
