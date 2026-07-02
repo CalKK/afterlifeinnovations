@@ -1,4 +1,4 @@
-import { TrendingUp, Zap, Globe, Users } from "lucide-react";
+import { TrendingUp, Users } from "lucide-react";
 
 const Stats = () => {
   const stats = [
@@ -29,38 +29,48 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-10 md:py-14">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-heading font-bold text-innovation mb-4">
-            Our Traction
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <div className="command-label mb-6">Section 03 - Field Metrics</div>
+            <h2 className="section-heading">Our Traction</h2>
+          </div>
+          <p className="section-copy">
             Our impact extends beyond technology - we're building a sustainable future 
             with measurable environmental and social benefits.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid gap-6 md:grid-cols-2">
           {stats.map((stat, index) => (
-            <div 
-              key={index} 
-              className="text-center p-8 bg-background rounded-2xl border border-border shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            <div
+              key={index}
+              className="tactical-card transition-transform duration-300 hover:-translate-y-1"
             >
-              <div className="text-4xl font-heading font-bold text-innovation mb-4/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <stat.icon className="text-4xl font-heading font-bold text-innovation mb-4" />
+              <div className="mb-8 flex items-start justify-between gap-4">
+                <div className="flex h-14 w-14 items-center justify-center border border-primary/35 bg-secondary/20 text-primary">
+                  <stat.icon className="h-6 w-6" />
+                </div>
+                <p className="font-mono-display text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+                  Metric {index + 1}
+                </p>
               </div>
-              
-              <div className="text-4xl font-heading font-bold text-innovation mb-4">
+
+              <div className="text-5xl text-primary md:text-6xl">
                 {stat.number}
               </div>
-              
-              <h3 className="text-xl font-heading font-semibold text-innovation mb-3">
+
+              <h3 className="mt-4 tactical-title text-2xl">
                 {stat.label}
               </h3>
-              
-              <p className="text-muted-foreground text-sm leading-relaxed">
+
+              <p className="mt-4 text-lg text-muted-foreground">
                 {stat.description}
+              </p>
+              <div className="tactical-divider my-8" />
+              <p className="font-mono-display text-xs uppercase tracking-[0.3em] text-primary">
+                Status: Verified
               </p>
             </div>
           ))}
