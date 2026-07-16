@@ -14,7 +14,7 @@ const Hero = () => {
       comingSoon: false
     },
     {
-      name: "10000mAh Power Bank",
+      name: "10,000mAh Power Bank",
       image: "https://raw.githubusercontent.com/CalKK/afterlife-innovations-web/main/images/PWB.png",
       comingSoon: false
     },
