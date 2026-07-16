@@ -53,7 +53,7 @@ const Hero = () => {
           </div>
 
           {/* Prominent Button Link */}
-          <div className="mb-12 fade-in">
+          <div className="mb-12 fade-in cursor-target">
             <Button
               size="lg"
               className="px-8 py-4 text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300"
@@ -69,7 +69,7 @@ const Hero = () => {
             {products.map((product, index) => (
               <div 
                 key={index} 
-                className="flex flex-col items-center p-6 bg-card rounded-2xl border border-border shadow-sm hover:shadow-lg transition-all duration-300 relative"
+                className="flex flex-col items-center p-6 bg-card rounded-2xl border border-border shadow-sm hover:shadow-lg transition-all duration-300 relative cursor-target"
               >
                 {product.comingSoon && (
                   <span className="absolute top-3 right-3 bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full">
