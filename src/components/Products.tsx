@@ -53,7 +53,7 @@ const Products = () => {
 
         <div className="grid gap-8">
           {products.map((product, index) => (
-            <div key={index} className="tactical-card grid gap-8 overflow-hidden lg:grid-cols-[minmax(320px,0.9fr)_minmax(0,1.1fr)]">
+            <div key={index} className="tactical-card grid gap-8 overflow-hidden lg:grid-cols-[minmax(320px,0.9fr)_minmax(0,1.1fr)] cursor-target">
               <div className="overflow-hidden border border-border bg-muted/50">
                 <img
                   src={product.image} 
